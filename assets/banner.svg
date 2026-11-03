@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="340" viewBox="0 0 1280 340" role="img" aria-labelledby="title desc">
+<title id="title">tata@skywood Skills</title><desc id="desc">Practical workflows for thoughtful AI work. Interview, understand, act.</desc>
+<rect width="1280" height="340" rx="24" fill="#132d2a"/>
+<circle cx="1140" cy="170" r="190" fill="none" stroke="#31564b" stroke-width="2"/>
+<circle cx="1140" cy="170" r="125" fill="none" stroke="#628f77" stroke-width="2"/>
+<circle cx="1140" cy="170" r="60" fill="#d7ea9f"/>
+<circle cx="1140" cy="170" r="12" fill="#132d2a"/>
+<text x="64" y="78" font-family="Arial, sans-serif" font-size="15" letter-spacing="4" fill="#d7ea9f">A GROWING LIBRARY OF AGENT SKILLS</text>
+<text x="60" y="160" font-family="Arial, sans-serif" font-weight="700" font-size="62" fill="#f7f5ed">tata@skywood Skills</text>
+<text x="64" y="214" font-family="Arial, sans-serif" font-size="26" fill="#c2d4ca">Practical workflows for thoughtful AI work.</text>
+<text x="64" y="286" font-family="Arial, sans-serif" font-size="16" fill="#d7ea9f">INTERVIEW  /  UNDERSTAND  /  ACT</text>
+</svg>

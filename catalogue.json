@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "skills": [
+    {
+      "id": "bullseye-marketing",
+      "name": "Bullseye Marketing",
+      "category": "Marketing & GTM",
+      "tags": ["acquisition", "channel-selection", "experiments", "founders"],
+      "summary": "Find three marketing channel bets through a founder interview, product evidence and focused two-week tests.",
+      "version": "0.1.0",
+      "status": "experimental",
+      "reviewed": "2026-11-03",
+      "inputs": ["Product and audience context", "Goal, cash budget and team capacity", "Product/GTM files, source links or a written brief"],
+      "outputs": ["Customized founder brief", "19 channel ideas", "Three test candidates with evidence and CAC assumptions", "Three daily 14-day plans"],
+      "start_prompt": "Use $bullseye-marketing for my product. Interview me first and ask for my product and GTM sources before recommending channels."
+    }
+  ]
+}

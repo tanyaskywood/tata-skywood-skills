@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bullseye Marketing"
+  short_description: "Find three channel bets through evidence and interviews"
+  default_prompt: "Use $bullseye-marketing to interview me, review my product and GTM data, and build three two-week marketing channel tests."

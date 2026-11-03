@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
+<title>tata@skywood Skills — Catalogue</title>
+<meta name="description" content="Browse practical agent skills for turning context into decisions. Start with Bullseye Marketing.">
+<style>
+:root{color-scheme:light;--ink:#173b32;--muted:#53665e;--paper:#f7f6ef;--line:#d4ddd0;--lime:#d7ea9f}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,sans-serif}a{color:inherit;text-underline-offset:4px}a:hover{text-decoration-thickness:2px}header,main,footer{max-width:1160px;margin:auto;padding:28px}nav{display:flex;justify-content:space-between;gap:20px;align-items:center}nav a{font-size:14px}.brand{font-weight:750;text-decoration:none}.hero{padding:66px 0 42px;max-width:830px}.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--muted)}h1{font-size:clamp(38px,6vw,72px);line-height:1.05;letter-spacing:-3px;margin:20px 0 24px}h1 em{font-family:Georgia,serif;font-weight:400}p{color:var(--muted)}.hero p{max-width:640px;font-size:19px}.tools{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;border-top:1px solid var(--line);padding-top:24px}label{font-size:13px;font-weight:650;display:block}input,select{display:block;width:100%;margin-top:7px;padding:13px;border:1px solid #91a696;border-radius:8px;font:inherit;color:var(--ink);background:white}input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #72952c;outline-offset:3px}.count{font-size:14px;margin:22px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:24px}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:28px;max-width:560px;display:flex;flex-direction:column}.card h2{font-size:28px;letter-spacing:-.7px;margin:16px 0 6px}.badge{font-size:11px;text-transform:uppercase;letter-spacing:1px;background:var(--lime);border-radius:20px;padding:5px 10px;display:inline-block}.meta{font-size:12px;color:var(--muted)}.tags{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 22px}.tag{font-size:12px;background:var(--paper);padding:3px 9px;border-radius:4px}.card h3{font-size:13px;margin:10px 0 0}.card ul{padding-left:20px;font-size:14px;color:var(--muted)}.actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:auto;padding-top:20px}.primary{background:var(--ink);color:white;padding:10px 16px;border-radius:7px;text-decoration:none;font-size:14px}.actions a:last-child{font-size:14px}.about{margin:60px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:32px;border-top:1px solid var(--line);padding-top:25px}.about h2{font-size:21px}.empty{padding:35px;border:1px dashed var(--line);border-radius:12px}footer{font-size:13px;color:var(--muted);padding-bottom:50px}[hidden]{display:none!important}@media(max-width:650px){header,main,footer{padding:20px}.hero{padding:40px 0 30px}h1{letter-spacing:-1.5px}.tools,.about{grid-template-columns:1fr}.card{padding:22px}nav{align-items:flex-start}}
+</style>
+</head>
+<body>
+<header><nav><a class="brand" href="https://github.com/tanyaskywood/tata-skywood-skills">tata@skywood Skills</a><a href="https://github.com/tanyaskywood/tata-skywood-skills/blob/main/CONTRIBUTING.md">Contribute ↗</a></nav>
+<div class="hero"><div class="eyebrow">The skills catalogue</div><h1>Thoughtful workflows.<br><em>Practical next steps.</em></h1><p>A growing library of reusable agent skills. Find a task, bring your context, and give your assistant a clearer way to help.</p></div></header>
+<main>
+<div class="tools" id="filters" hidden><label>Search skills<input id="search" type="search" placeholder="Try marketing, acquisition, founders…"></label><label>Category<select id="category"><option value="">All categories</option><!-- CATEGORIES --></select></label><label>Sort by<select id="sort"><option value="name">Name A–Z</option><option value="reviewed">Recently reviewed</option></select></label></div>
+<p id="count" class="count" role="status" aria-live="polite"><!-- COUNT --> skills available</p>
+<div class="grid" id="cards"><!-- CARDS --></div>
+<p id="empty" class="empty" hidden>No skills match your search. Try a broader term or choose all categories.</p>
+<noscript><p>All skills are shown. Enable JavaScript to search, filter and sort.</p></noscript>
+<section class="about"><div><h2>Start with a conversation</h2><p>Each skill explains what to provide and what you will receive. Read its overview, install the folder, then use the suggested starting prompt.</p><a href="https://github.com/tanyaskywood/tata-skywood-skills#get-started">Installation guidance ↗</a></div><div><h2>Room to grow, evidence to earn</h2><p>Experimental skills have not yet established broad real-world results. Browse the instructions, try them with your context, and share what worked or needs improving.</p><a href="https://github.com/tanyaskywood/tata-skywood-skills/issues/new/choose">Suggest a skill or share feedback ↗</a></div></section>
+</main><footer>Maintained by Tanya · Independent agent skills collection · <a href="https://github.com/tanyaskywood/tata-skywood-skills">View source on GitHub</a></footer>
+<script>
+const search = document.querySelector('#search');
+const category = document.querySelector('#category');
+const sort = document.querySelector('#sort');
+const container = document.querySelector('#cards');
+const cards = [...container.children];
+document.querySelector('#filters').hidden = false;
+function update() {
+  const query = search.value.trim().toLocaleLowerCase();
+  let visible = 0;
+  const ordered = [...cards].sort((a,b) => sort.value === 'reviewed'
+    ? b.dataset.reviewed.localeCompare(a.dataset.reviewed) || a.dataset.name.localeCompare(b.dataset.name)
+    : a.dataset.name.localeCompare(b.dataset.name));
+  for (const card of ordered) {
+    card.hidden = !(card.dataset.search.includes(query) && (!category.value || card.dataset.category === category.value));
+    if (!card.hidden) visible++;
+    container.append(card);
+  }
+  document.querySelector('#count').textContent = `${visible} of ${cards.length} skill${cards.length === 1 ? '' : 's'}`;
+  document.querySelector('#empty').hidden = visible !== 0;
+}
+search.addEventListener('input',update);
+category.addEventListener('change',update);
+sort.addEventListener('change',update);
+update();
+</script></body></html>
