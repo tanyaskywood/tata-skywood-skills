@@ -89,4 +89,4 @@ Bullseye Marketing adapts the user-supplied Oskar Bader session summary and prom
 
 ## License
 
-Licensing is pending the maintainer's selection. Public visibility does not itself grant an open-source license. Third-party references remain subject to their respective rights.
+This collection is licensed under the [MIT License](LICENSE). You may use, adapt and share the skills, including commercially, provided you retain the copyright and license notice. Third-party references remain subject to their respective rights.

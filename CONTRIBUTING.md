@@ -46,4 +46,4 @@ Use only the permissions the user granted. A planning skill should not silently 
 | `inputs`, `outputs` | What a user brings and receives |
 | `start_prompt` | Copyable first request |
 
-Until a license is selected, discuss substantial outside contributions with the maintainer before submitting them.
+By submitting a contribution, you agree that it may be distributed under this repository's [MIT License](LICENSE). Preserve third-party attribution and include only material you have permission to contribute.
